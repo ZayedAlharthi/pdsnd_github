@@ -167,12 +167,11 @@ def display_raw_data(df):
     view_raw_data = input('Would you like to view the first 5 raw data? Enter yes or no.\n ')
     if view_raw_data.lower() != 'no':
         index = 0
-        print(df.iloc[index:index+5])
         while True:
+            print(df.iloc[index:index + 5])
             view_more_raw_data = input('Would you like to view the next 5 raw data? Enter yes or no. \n ')
             if view_more_raw_data != 'no':
                 index +=5
-                print(df.iloc[index:index+5])
             else:
                 return
     else:
