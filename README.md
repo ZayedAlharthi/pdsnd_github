@@ -43,7 +43,7 @@ The Chicago, New York City, and Washington datasets will be explored by computin
 # How to run the project
 * Clone the project
 * Prerequisite
-    * You must have installed python and the pandas library.
+    * You must have python and pandas library installed.
 * Run the project
     * Open the terminal
     * And run
