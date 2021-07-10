@@ -21,8 +21,7 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
-        city = input('Which city should we investigate? (chicago, new york city, or washington): ')
-        city = city.lower()
+        city = input('Which city should we investigate? (chicago, new york city, or washington): ').lower()
         if city in CITY_DATA:
             break
         else:
@@ -30,8 +29,7 @@ def get_filters():
 
     # TO DO: get user input for month (all, january, february, ... , june)
     while True:
-        month = input('Which month should we filter by? (all, january, february, ... , june): ')
-        month = month.lower()
+        month = input('Which month should we filter by? (all, january, february, ... , june): ').lower()
         if month in months:
             break
         else:
@@ -39,8 +37,7 @@ def get_filters():
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
-        day = input('Which day should we filter by? (all, monday, tuesday, ... sunday): ')
-        day = day.lower()
+        day = input('Which day should we filter by? (all, monday, tuesday, ... sunday): ').lower()
         if day in days:
             break
         else:
@@ -172,12 +169,11 @@ def display_raw_data(df):
     view_raw_data = input('Would you like to view the first 5 raw data? Enter yes or no.\n ')
     if view_raw_data.lower() != 'no':
         index = 0
-        print(df.iloc[index:index+5])
         while True:
+            print(df.iloc[index:index + 5])
             view_more_raw_data = input('Would you like to view the next 5 raw data? Enter yes or no. \n ')
             if view_more_raw_data != 'no':
                 index +=5
-                print(df.iloc[index:index+5])
             else:
                 return
     else:
